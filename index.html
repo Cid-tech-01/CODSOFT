@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+            <nav>
+                <h1 class="logo">ADITYA PODDAR</h1>
+                <ul class="nav-links">
+                    <li class="btn"><a href="#Hero">Home</a></li>
+                    <li class="btn"><a href="#About">About</a></li>
+                    <li class="btn"><a href="#Skills">Skills</a></li>
+                    <li class="btn"><a href="#Projects">Projects</a></li>
+                    <li class="btn"><a href="#Contact">Contact</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+    </header>
+    <main>
+        <section id="Hero">
+            <div class="Hero-content">
+                <h3>Hello, I am</h3>
+                <h1>Aditya Poddar</h1>
+                <p>And I am a <span id="element"></span></p>
+            </div>
+            <div class="Hero-img">
+            <img src="IMG_20260206_100052.jpg" alt="Aditya Poddar">
+            </div>
+        </section>
+        <section id="About">
+            <h2 class="section-title">About Me</h2>
+            <p>I am an undergraduate student curently pursuing my degree in B.Tech(CSE) at Arka Jain University, learning web development and programming.
+            I enjoy building websites and solving programming problems.
+            </p>
+        </section>
+        <section id="Skills">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-container">
+
+    <div class="skill-card">
+        <h3>Frontend</h3>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </div>
+            <div class="skill-card">
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>C++</li>
+                        <li>Java</li>
+                        <li>C</li>
+                    </ul>
+            </div>
+            <div class="skill-card">
+                    <h3>Database</h3>
+                    <ul>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="Projects">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-container">
+            <div class="project-card">
+                <img src="pf.png" alt="Netflix-CLone">
+                <h3>Portfolio Website</h3>
+                <p>Portfolio made using HTML and CSS</p>
+                <a href="#">GitHub</a>
+            </div>
+            <div class="project-card">
+                <img src="ss.png" alt="Space Shooter">
+                <h3>Basic Space Shooter Game</h3>
+                <p>A 2D game created using Python and Pygame</p>
+                <a href="#">GitHub</a>
+                </div>
+                <div class="project-card">
+                    <img src="image.png" alt="Portfolio">
+                    <h3>Netflix Homepage</h3>
+                    <p>A static Netflix homepage created using HTML and CSS</p>
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+        </section>
+        <section id="Contact">
+            <h2 class="section-title">Contact</h2>
+            <div class="social">
+                <p><i class="fa-solid fa-envelope"></i><a href="mailto:adityapoddar10a02@gmail.com">adityapoddar10a02@gmail.com</a>
+                </p>
+                <p><i class="fa-brands fa-github"></i><a href="https://github.com/Cid-tech-01">GitHub / Cid-tech-01</a></p>
+                <p><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/aditya-poddar-a16aa7328">LinkedIn / Aditya Poddar</a></p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2026 Aditya Poddar |  Student Portfolio</p>
+    </footer>
+        <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+        <script>
+                var element = new Typed('#element', {
+                strings: ['Web Developer', 'Frontend Developer', 'Web Designer'],
+                typeSpeed: 50,
+                backSpeed: 50,
+                backDelay: 1000,
+                loop: true
+            });
+            const toggle=document.querySelector(".menu-toggle");
+            const navLinks=document.querySelector(".nav-links");
+            toggle.onclick=()=>{
+                navLinks.classList.toggle("active");
+            };
+            document.querySelectorAll(".navLinks a").forEach(link=>{
+                link.onclick=()=>{
+                    navLinks.classList.remove("active");
+                };
+            });
+        </script>
+</body>
+</html>
